@@ -34,20 +34,22 @@ void binary(){
 
 int main(){
 	char repeat = 'n';
-  
-  	binary();
-
-  	cout << "Convert another number enter Y or N: ";  		
-  	cin >> repeat;
-  	if(repeat == 'y' || repeat == 'Y'){
+	binary();
+	
+	cout << "Convert another number enter Y or N: ";  		
+	cin >> repeat;
+	if(repeat == 'y' || repeat == 'Y'){
 		cout << endl;
-	  	main();
-  	}
-  	else if(repeat == 'n' || repeat == 'N'){
+		main();
+		
+	}
+	else if(repeat == 'n' || repeat == 'N'){
 		return 0;
-  	}
-  	else{
-	  	cout << "Error closing program" << endl;			
-  	}
-  	return 0;
+		
+	}
+	else{
+		cout << "Error closing program" << endl
+	}
+	return 0;
+	
 }
