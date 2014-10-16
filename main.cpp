@@ -10,7 +10,7 @@ int main(){
   int counter = 0;     //keeps track of how long the array is
   char repeat = n;
   
-  cout << "Enter a decimal number in base 10: ";
+  cout << "Enter a number in base 10: ";
   cin >> start;
   
   while(start >= 1){
