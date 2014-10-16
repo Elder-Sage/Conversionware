@@ -14,7 +14,7 @@ void binary(){
     while(start >= 1){
     	rem = start % 2;        
     	if(rem == 0){           //Modular Division used to find remainder
-      		bin[counter] = 0;   //check if input is 0 place 0 in array
+    		bin[counter] = 0;   //check if input is 0 place 0 in array
     	}                       //if remainder is anything else place 1 in array
     	else{
 			bin[counter] = 1;
