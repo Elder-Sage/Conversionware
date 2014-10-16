@@ -4,7 +4,7 @@ using std::cin;
 using std::endl;
 
 void binary(){
-	int start = 0;
+    int start = 0;
     int rem = 0;         //holds remainder
     int bin[100] = {0};  //place holder for binary list
     int counter = 0;     //keeps track of how long the array is
@@ -17,7 +17,7 @@ void binary(){
     		bin[counter] = 0;   //check if input is 0 place 0 in array
     	}                       //if remainder is anything else place 1 in array
     	else{
-			bin[counter] = 1;
+		bin[counter] = 1;
     	}
     counter++;
     start /= 2;
