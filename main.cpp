@@ -3,11 +3,14 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void binary(int start){
+void binary(){
+	int start = 0;
     int rem = 0;         //holds remainder
     int bin[100] = {0};  //place holder for binary list
     int counter = 0;     //keeps track of how long the array is
-
+    
+    cout << "Enter a numer in Bast 10 notation: ";
+    cin >> start;
     while(start >= 1){
     	rem = start % 2;        
     	if(rem == 0){           //Modular Division used to find remainder
@@ -25,18 +28,14 @@ void binary(int start){
     	cout << bin[counter]; //prints binary string 
     	counter--;
     }
-    cout << endl;
+    cout << endl << endl;
 }
 	
 
 int main(){
 	char repeat = 'n';
-  	int number = 0;
   
-  	cout << "Enter a number in Base 10 notation: ";
-  	cin >> number;
-  	binary(number);
-  	cout << endl;
+  	binary();
 
   	cout << "Convert another number enter Y or N: ";		
   	cin >> repeat;
