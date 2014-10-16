@@ -41,15 +41,12 @@ int main(){
 	if(repeat == 'y' || repeat == 'Y'){
 		cout << endl;
 		main();
-		
 	}
 	else if(repeat == 'n' || repeat == 'N'){
 		return 0;
-		
 	}
 	else{
 		cout << "Error closing program" << endl
 	}
 	return 0;
-	
 }
