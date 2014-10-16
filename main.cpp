@@ -9,6 +9,7 @@ int main(){
   int rem = 0;         //holds remainder
   int bin[100] = {0};  //place holder for binary list
   int counter = 0;     //keeps track of how long the array is
+  char repeat = n;
   
   cout << "Enter a decimal number in base 10: ";
   cin >> start;
@@ -30,6 +31,19 @@ int main(){
   while(counter >= 0){
     cout << bin[counter]; //prints binary string 
     counter--;
+  }
+  cout << endl;
+
+  cout << "Convert another number enter Y or N: ";		//Ask user if they would like to enter another number
+  cin >> repeat;
+  if(repeat == 'y' || repeat == 'Y'){
+	  main();
+  }
+  else if(repeat == 'n' || repeat == 'N'){
+	  return 0;
+  }
+  else{
+	  cout << "Error closing program" << endl;			
   }
   return 0;
   }
