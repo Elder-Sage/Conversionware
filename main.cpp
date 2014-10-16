@@ -3,17 +3,12 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-int main(){
-  int start = 0;       //user entered number
-  int rem = 0;         //holds remainder
-  int bin[100] = {0};  //place holder for binary list
-  int counter = 0;     //keeps track of how long the array is
-  char repeat = n;
-  
-  cout << "Enter a number in base 10: ";
-  cin >> start;
-  
-  while(start >= 1){
+void binary(int start){
+    int rem = 0;         //holds remainder
+    int bin[100] = {0};  //place holder for binary list
+    int counter = 0;     //keeps track of how long the array is
+
+	while(start >= 1){
     rem = start % 2;        
     if(rem == 0){           //Modular Division used to find remainder
       bin[counter] = 0;     //check if input is 0 place 0 in array
@@ -24,7 +19,6 @@ int main(){
     counter++;
     start /= 2;
   }
-  
   counter--; //counter incrimented 1 uneaded time in above loop so this fixes that so printing works correctly
   cout << "The Binary conversion of your number is: ";
   while(counter >= 0){
@@ -32,10 +26,22 @@ int main(){
     counter--;
   }
   cout << endl;
+}
+	
 
-  cout << "Convert another number enter Y or N: ";		//Ask user if they would like to enter another number
+int main(){
+  char repeat = 'n';
+  int number = 0;
+  
+  cout << "Enter number in base 10: ";
+  cin >> number;
+  binary(number);
+  cout << endl;
+
+  cout << "Convert another number enter Y or N: ";		
   cin >> repeat;
   if(repeat == 'y' || repeat == 'Y'){
+	  cout << endl;
 	  main();
   }
   else if(repeat == 'n' || repeat == 'N'){
