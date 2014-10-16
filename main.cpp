@@ -37,7 +37,7 @@ int main(){
   
   	binary();
 
-  	cout << "Convert another number enter Y or N: "; 		
+  	cout << "Convert another number enter Y or N: ";  		
   	cin >> repeat;
   	if(repeat == 'y' || repeat == 'Y'){
 		cout << endl;
