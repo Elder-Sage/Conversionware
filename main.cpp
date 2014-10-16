@@ -20,7 +20,7 @@ void binary(int start){
     start /= 2;
   }
   counter--; //counter incrimented 1 uneaded time in above loop so this fixes that so printing works correctly
-  cout << "The Binary conversion of your number is: ";
+  cout << "The inputed number in Binary is: ";
   while(counter >= 0){
     cout << bin[counter]; //prints binary string 
     counter--;
@@ -33,7 +33,7 @@ int main(){
   char repeat = 'n';
   int number = 0;
   
-  cout << "Enter number in base 10: ";
+  cout << "Enter a number in Base 10 notation: ";
   cin >> number;
   binary(number);
   cout << endl;
