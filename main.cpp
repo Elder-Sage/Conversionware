@@ -13,14 +13,22 @@ int main(){
   cout << "Enter a decimal number in base 10";
   cin >> start;
   
-  while(start > 0){
+  while(start >= 1){
     rem = start % 2;
-    start /= 2;
     if(rem == 0){
       bin[counter] = 0;
     }
-    else()
+    else{
     bin[counter] = 1;
+    }
+    counter++;
+    start /= 2;
+  }
+  counter--;
+  cout << "The Binary conversion of your number is: ";
+  while(counter >= 0){
+    cout << bin[counter];
+    counter--;
   }
   return 0;
   }
