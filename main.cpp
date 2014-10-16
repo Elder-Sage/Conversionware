@@ -10,7 +10,7 @@ int main(){
   int bin[100] = {0};  //place holder for binary list
   int counter = 0;     //keeps track of how long the array is
   
-  cout << "Enter a decimal number in base 10 ";
+  cout << "Enter a decimal number in base 10: ";
   cin >> start;
   
   while(start >= 1){
