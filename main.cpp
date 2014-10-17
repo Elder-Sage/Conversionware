@@ -6,7 +6,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void tobinary(){
+void dectobinary(){
 	int start = 0;
 	int rem = 0;         //holds remainder
 	int bin[100] = { 0 };  //place holder for binary list
@@ -34,7 +34,7 @@ void tobinary(){
 	cout << endl << endl;
 }
 
-void todecimal(){
+void bintodecimal(){
 	std::string bin;
 	int converted = 0;
 	int expo;
@@ -61,20 +61,35 @@ void todecimal(){
 int main(){
 	int menu;
 	char answer = 'n';
+	int input;
 	do{
 		cout << "Choose" << endl;
 		cout << "1: Binary -> Decimal" << endl;
 		cout << "2: Decimal -> Binary" << endl;
+		cout << "3: Decimal -> Octal" << endl;
+		cout << "4: Decimal -> Hexideximal" << endl;
+		cout << "5: Binary -> Octal" << endl;
+		cout << "6: Binary -> Hexidecimal" << endl;
 		cout << "Choice: ";
 		cin >> menu;
 		switch (menu){
 		case 1:
 			cout << endl;
-			todecimal();
+			bintodecimal();
 			break;
 		case 2:
 			cout << endl;
-			tobinary();
+			dectobinary();
+			break;
+		case 3: 
+			cout << "Enter a Base 10 number: ";
+			cin >> input;
+			cout << "The input in Octal is " << std::oct << input << endl;
+			break;
+		case 4:
+			cout << "Enter a Base 10 number: ";
+			cin >> input;
+			cout << "The input in Hexidecimal is " << std::hex << input << endl;
 			break;
 		}
 		cout << "Would you like to run the program again Press Y or N: ";
