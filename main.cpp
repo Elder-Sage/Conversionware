@@ -1,4 +1,7 @@
 #include <iostream>
+#include <string>
+#include <sstream>
+#include <cmath>
 using std::cout;
 using std::cin;
 using std::endl;
@@ -32,7 +35,27 @@ void tobinary(){
 }
 
 void todecimal(){
+	std::string bin;
+	int converted = 0;
+	int expo;
+	int loop;
 	
+	cout << "I will convert a binary number to a standard Base 10 number." << endl;
+	cout << "Enter a binary number: ";
+	cin >> bin;
+	expo = bin.length() - 1;
+	loop = expo;
+	for(int x = 0; x <= loop; x++){
+		if(bin[x] == '1'){
+			converted += pow(2,expo);
+			expo--;
+		}
+		else{
+			expo--;
+		}
+	}
+	cout << "Once converted your input is " << converted << " in Base 10 notation" << endl;
+
 }
 
 int main(){
