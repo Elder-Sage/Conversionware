@@ -3,7 +3,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void binary(){
+void tobinary(){
 	int start = 0;
 	int rem = 0;         //holds remainder
 	int bin[100] = {0};  //place holder for binary list
@@ -30,11 +30,14 @@ void binary(){
     	}
     	cout << endl << endl;
 }
+
+void todecimal(){
 	
+}
 
 int main(){
 	char repeat = 'n';
-	binary();
+	tobinary();
 	
 	cout << "Convert another number enter Y or N: ";  		
 	cin >> repeat;
