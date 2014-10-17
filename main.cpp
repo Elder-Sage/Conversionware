@@ -2,7 +2,7 @@
 #include <string>
 #include <sstream>
 #include <cmath>
-using std::cout;
+using std::cout; 
 using std::cin;
 using std::endl;
 
