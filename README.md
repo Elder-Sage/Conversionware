@@ -10,3 +10,5 @@ their first input value.
 v0.3.1 Added better switch case for choice in what to convert. Added more choices in the different kinds of conversion that a user can choose. Converted function to calculate the conversions.
 
 v0.3.2 With all the upgrades to the program to include converions into Octal and Hexadecimal the named had to be changed to something that was closer to being the truth. In this update the conversions into octal and hexadecimal from binary or decimal have been fully implemented and working correctly. The next step will be to update and be able to convert from octal or hexadecimal into the others.
+
+v0.3.3 Program can now convert Octal numbers into all three other choices. Implemented the beginnings of an error handling solution. This will keep inputted numbers from users from crashing the program.
