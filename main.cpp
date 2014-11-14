@@ -68,7 +68,7 @@ int main(){
 		switch (menu){
 		case 1:
 			cout << endl;
-			cout << "Enter a numer in Base 10 notation: ";
+			cout << "Enter a Base 10 number: ";
 			cin >> input;
 			dectobinary(input);
 			break;
