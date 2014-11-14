@@ -11,7 +11,6 @@ void dectobinary(int start){
 	int bin[100] = { 0 };  //place holder for binary list
 	int counter = 0;     //keeps track of how long the array is
 
-
 	while (start >= 1){
 		rem = start % 2;
 		if (rem == 0){           	//Modular Division used to find remainder
@@ -87,7 +86,6 @@ int main(){
 			break;
 		case 4:
 			cout << endl;
-			cout << "I will convert a binary number to a standard Base 10 number." << endl;
 			cout << "Enter a binary number: ";
 			cin >> bin;
 			converted = bintodecimal(bin);
@@ -95,7 +93,6 @@ int main(){
 			break;
 		case 5:
 			cout << endl;
-			cout << "I will convert a binary number to a standard Base 10 number." << endl;
 			cout << "Enter a binary number: ";
 			cin >> bin;
 			converted = bintodecimal(bin);
@@ -103,7 +100,6 @@ int main(){
 			break;
 		case 6:
 			cout << endl;
-			cout << "I will convert a binary number to a standard Base 10 number." << endl;
 			cout << "Enter a binary number: ";
 			cin >> bin;
 			converted = bintodecimal(bin);
