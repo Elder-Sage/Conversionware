@@ -116,45 +116,39 @@ int main(){
 		menu = is_number(menu);
 		switch (menu){
 		case 1:
-			cout << endl;
-			cout << "Enter a Base 10 number: ";
+			cout << endl << "Enter a Base 10 number: ";
 			cin >> input;
 			input = is_number(input);
 			dectobinary(input);
 			break;
 		case 2:
-			cout << endl;
-			cout << "Enter a Base 10 number: ";
+			cout << endl << "Enter a Base 10 number: ";
 			cin >> input;
 			input = is_number(input);
 			cout << "The input in Octal is " << std::oct << input << endl;
 			break;
 		case 3:
-			cout << endl;
-			cout << "Enter a Base 10 number: ";
+			cout << endl << "Enter a Base 10 number: ";
 			cin >> input;
 			input = is_number(input);
 			cout << "The input in Hexidecimal is " << std::hex << input << endl;
 			break;
 		case 4:
-			cout << endl;
-			cout << "Enter a binary number: ";
+			cout << endl << "Enter a binary number: ";
 			cin >> strinput;
 			is_binary(strinput);
 			converted = bintodecimal(strinput);
 			cout << "Once converted your input is " << converted << " in Base 10 notation" << endl;
 			break;
 		case 5:
-			cout << endl;
-			cout << "Enter a binary number: ";
+			cout << endl << "Enter a binary number: ";
 			cin >> input;
 			is_binary(strinput);
 			converted = bintodecimal(strinput);
 			cout << "Once converted your input is " << std::oct << converted << " in Octal." << endl;
 			break;
 		case 6:
-			cout << endl;
-			cout << "Enter a binary number: ";
+			cout << endl << "Enter a binary number: ";
 			cin >> input;
 			is_binary(strinput);
 			converted = bintodecimal(strinput);
