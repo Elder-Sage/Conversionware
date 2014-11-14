@@ -99,7 +99,6 @@ int main(){
 	char answer = 'n';
 	int input;
 	int converted;
-	int octal[100] = { 0 };
 	std::string strinput;
 	do{
 		cout << "Choose" << endl;
