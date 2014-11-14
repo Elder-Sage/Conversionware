@@ -82,9 +82,9 @@ int oct_to_decimal(std::string oct){
 	int convert[30] = { 0 };
 	int octal = 0;
 	int flip = oct.length() - 1;
-	
+
 	for (int i = 0; i <= oct.length() - 1; i++){
-		convert[flip] = (oct[i] -48);
+		convert[flip] = (oct[i] - 48);
 		flip--;
 	}//end of for loop
 
@@ -144,7 +144,7 @@ int main(){
 			cout << endl << "Enter a binary number: ";
 			cin >> input;
 			is_binary(strinput);
-			converted = bin_tode_cimal(strinput);
+			converted = bin_to_decimal(strinput);
 			cout << "Once converted your input is " << std::oct << converted << " in Octal." << endl;
 			break;
 		case 6:
@@ -176,6 +176,6 @@ int main(){
 		cout << "Would you like to run the program again Press Y or N: ";
 		cin >> answer;
 		cout << endl;
-	}while(answer == 'Y' || answer == 'y');
+	} while (answer == 'Y' || answer == 'y');
 	return 0;
 }
