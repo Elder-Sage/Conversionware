@@ -6,7 +6,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void dectobinary(int start){
+void dec_to_binary(int start){
 	int rem = 0;         	//holds remainder
 	int bin[100] = { 0 };  	//place holder for binary list
 	int counter = 0;     	//keeps track of how long the array is
@@ -31,7 +31,7 @@ void dectobinary(int start){
 	cout << endl << endl;
 }
 
-int bintodecimal(std::string bin){
+int bin_to_decimal(std::string bin){
 	int converted = 0;
 	int expo;
 	int loop;
@@ -119,7 +119,7 @@ int main(){
 			cout << endl << "Enter a Base 10 number: ";
 			cin >> input;
 			input = is_number(input);
-			dectobinary(input);
+			dec_to_binary(input);
 			break;
 		case 2:
 			cout << endl << "Enter a Base 10 number: ";
@@ -137,21 +137,21 @@ int main(){
 			cout << endl << "Enter a binary number: ";
 			cin >> strinput;
 			is_binary(strinput);
-			converted = bintodecimal(strinput);
+			converted = bin_to_decimal(strinput);
 			cout << "Once converted your input is " << converted << " in Base 10 notation" << endl;
 			break;
 		case 5:
 			cout << endl << "Enter a binary number: ";
 			cin >> input;
 			is_binary(strinput);
-			converted = bintodecimal(strinput);
+			converted = bin_tode_cimal(strinput);
 			cout << "Once converted your input is " << std::oct << converted << " in Octal." << endl;
 			break;
 		case 6:
 			cout << endl << "Enter a binary number: ";
 			cin >> input;
 			is_binary(strinput);
-			converted = bintodecimal(strinput);
+			converted = bin_to_decimal(strinput);
 			cout << "Once converted your input is " << std::hex << converted << " in Hexadecimal." << endl;
 			break;
 		case 7:
@@ -164,7 +164,7 @@ int main(){
 			cout << endl << "Enter an Octal number: ";
 			cin >> strinput;
 			converted = oct_to_decimal(strinput);
-			dectobinary(converted);
+			dec_to_binary(converted);
 			break;
 		case 9:
 			cout << endl << "Enter an Octal number: ";
