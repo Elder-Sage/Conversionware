@@ -63,20 +63,28 @@ void is_binary(std::string &bin){
 	}//end of for loop
 }
 
-std::string is_octal(std::string oct){
+void is_octal(std::string &oct){
 	bool fact = false;
+	int exit = 0;
 	while (fact == false){
 		int loop = (oct.length() - 1);
 		for (int i = 0; i <= loop; i++){
 			if (oct[i] >= '0' && oct[i] <= '8'){
+				fact = true;
+				exit++;
 			}//end of if
 			else{
+				fact = false;
 				cout << "That is not a valid Octal number." << endl;
 				cout << "Please enter again: ";
+				cin >> oct;
+				is_octal(oct);
 			}//end of else
 		}//end of for loop
+		if (exit == loop && fact == true){
+			break;
+		}
 	}//end of while loop
-	return oct;
 }
 
 int is_number(int num){
@@ -173,19 +181,21 @@ int main(){
 		case 7:
 			cout << endl << "Enter an Octal number: ";
 			cin >> strinput;
-			strinput = is_octal(strinput);
+			is_octal(strinput);
 			converted = oct_to_decimal(strinput);
 			cout << "Once converted your input is " << converted << " in Base 10 notation." << endl;
 			break;
 		case 8:
 			cout << endl << "Enter an Octal number: ";
 			cin >> strinput;
+			is_octal(strinput);
 			converted = oct_to_decimal(strinput);
 			dec_to_binary(converted);
 			break;
 		case 9:
 			cout << endl << "Enter an Octal number: ";
 			cin >> strinput;
+			is_octal(strinput);
 			converted = oct_to_decimal(strinput);
 			cout << "Once converted your input is " << std::hex << converted << " in Hexadecimal." << endl;
 			break;
