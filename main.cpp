@@ -15,7 +15,7 @@ void dec_to_binary(int start){
 		rem = start % 2;
 		if (rem == 0){           	//Modular Division used to find remainder
 			bin[counter] = 0;   	//check if input is 0 place 0 in array
-		}				//if remainder is anything else place 1 in array
+		}							//if remainder is anything else place 1 in array
 		else{
 			bin[counter] = 1;
 		}
@@ -61,6 +61,22 @@ void is_binary(std::string &bin){
 		}//end of if
 		else{}
 	}//end of for loop
+}
+
+std::string is_octal(std::string oct){
+	bool fact = false;
+	while (fact == false){
+		int loop = (oct.length() - 1);
+		for (int i = 0; i <= loop; i++){
+			if (oct[i] >= '0' && oct[i] <= '8'){
+			}//end of if
+			else{
+				cout << "That is not a valid Octal number." << endl;
+				cout << "Please enter again: ";
+			}//end of else
+		}//end of for loop
+	}//end of while loop
+	return oct;
 }
 
 int is_number(int num){
@@ -157,6 +173,7 @@ int main(){
 		case 7:
 			cout << endl << "Enter an Octal number: ";
 			cin >> strinput;
+			strinput = is_octal(strinput);
 			converted = oct_to_decimal(strinput);
 			cout << "Once converted your input is " << converted << " in Base 10 notation." << endl;
 			break;
@@ -171,6 +188,9 @@ int main(){
 			cin >> strinput;
 			converted = oct_to_decimal(strinput);
 			cout << "Once converted your input is " << std::hex << converted << " in Hexadecimal." << endl;
+			break;
+		default:
+			cout << "You did not enter a proper choice." << endl;
 			break;
 		} //end of switch
 		cout << "Would you like to run the program again Press Y or N: ";
